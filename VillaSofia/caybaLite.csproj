@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97CC6FE5-E570-47FE-9118-381A067E1095}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VillaSofia</RootNamespace>
+    <AssemblyName>VillaSofia</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\Programacion\Guna\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI WinForms\.net 2.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\Documents\Programacion\Guna\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 2.0\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.23\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PrinterUtility, Version=1.0.2.0, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\PrinterUtility.1.2.0\lib\PrinterUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CduCalendario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduCalendario.Designer.cs">
+      <DependentUpon>CduCalendario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduFacturacion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduFacturacion.Designer.cs">
+      <DependentUpon>CduFacturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduFacturacionVacio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduFacturacionVacio.Designer.cs">
+      <DependentUpon>CduFacturacionVacio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduInventarioBarra.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduInventarioBarra.Designer.cs">
+      <DependentUpon>CduInventarioBarra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduInventarioInicial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduInventarioInicial.Designer.cs">
+      <DependentUpon>CduInventarioInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduMenuConjunto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduMenuConjunto.Designer.cs">
+      <DependentUpon>CduMenuConjunto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduMenuPrincipal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduMenuPrincipal.Designer.cs">
+      <DependentUpon>CduMenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduMostrarEventoPrecio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduMostrarEventoPrecio.Designer.cs">
+      <DependentUpon>CduMostrarEventoPrecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduMostrarReceta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduMostrarReceta.designer.cs">
+      <DependentUpon>CduMostrarReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduPanelOpcionesCaja.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduPanelOpcionesCaja.Designer.cs">
+      <DependentUpon>CduPanelOpcionesCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduProducto.Designer.cs">
+      <DependentUpon>CduProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CduRegistroEvento2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CduRegistroEvento2.Designer.cs">
+      <DependentUpon>CduRegistroEvento2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClsControl.cs" />
+    <Compile Include="ClsModelo.cs" />
+    <Compile Include="ClsSession.cs" />
+    <Compile Include="ClsUsuarios.cs" />
+    <Compile Include="DatosConexion.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarInsumo.Designer.cs">
+      <DependentUpon>FrmAgregarInsumo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarProducto.Designer.cs">
+      <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCancelarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCancelarFactura.Designer.cs">
+      <DependentUpon>FrmCancelarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCierreCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCierreCaja.Designer.cs">
+      <DependentUpon>FrmCierreCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClasificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClasificacion.designer.cs">
+      <DependentUpon>FrmClasificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngresarReceta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngresarReceta.designer.cs">
+      <DependentUpon>FrmIngresarReceta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInsumoProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInsumoProducto.Designer.cs">
+      <DependentUpon>FrmInsumoProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventario.Designer.cs">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoginUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoginUsuario.Designer.cs">
+      <DependentUpon>FrmLoginUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMostrarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMostrarEvento.Designer.cs">
+      <DependentUpon>FrmMostrarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMovimientosCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMovimientosCaja.Designer.cs">
+      <DependentUpon>FrmMovimientosCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProducto.designer.cs">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProformaEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProformaEvento.Designer.cs">
+      <DependentUpon>FrmProformaEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroEvento.Designer.cs">
+      <DependentUpon>FrmRegistroEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroTrabajador.designer.cs">
+      <DependentUpon>FrmRegistroTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroUsuario.Designer.cs">
+      <DependentUpon>FrmRegistroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipoTrabajador.designer.cs">
+      <DependentUpon>FrmTipoTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUM.designer.cs">
+      <DependentUpon>FrmUM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxPersonalizado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageBoxPersonalizado.Designer.cs">
+      <DependentUpon>MessageBoxPersonalizado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VillaSofia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VillaSofia.Designer.cs">
+      <DependentUpon>VillaSofia.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CduCalendario.resx">
+      <DependentUpon>CduCalendario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduFacturacion.resx">
+      <DependentUpon>CduFacturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduFacturacionVacio.resx">
+      <DependentUpon>CduFacturacionVacio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduInventarioBarra.resx">
+      <DependentUpon>CduInventarioBarra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduInventarioInicial.resx">
+      <DependentUpon>CduInventarioInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduMenuConjunto.resx">
+      <DependentUpon>CduMenuConjunto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduMenuPrincipal.resx">
+      <DependentUpon>CduMenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduMostrarEventoPrecio.resx">
+      <DependentUpon>CduMostrarEventoPrecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduMostrarReceta.resx">
+      <DependentUpon>CduMostrarReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduPanelOpcionesCaja.resx">
+      <DependentUpon>CduPanelOpcionesCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduProducto.resx">
+      <DependentUpon>CduProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CduRegistroEvento2.resx">
+      <DependentUpon>CduRegistroEvento2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarInsumo.resx">
+      <DependentUpon>FrmAgregarInsumo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarProducto.resx">
+      <DependentUpon>FrmAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCancelarFactura.resx">
+      <DependentUpon>FrmCancelarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCierreCaja.resx">
+      <DependentUpon>FrmCierreCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClasificacion.resx">
+      <DependentUpon>FrmClasificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngresarReceta.resx">
+      <DependentUpon>FrmIngresarReceta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInsumoProducto.resx">
+      <DependentUpon>FrmInsumoProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventario.resx">
+      <DependentUpon>FrmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoginUsuario.resx">
+      <DependentUpon>FrmLoginUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrarEvento.resx">
+      <DependentUpon>FrmMostrarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMovimientosCaja.resx">
+      <DependentUpon>FrmMovimientosCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProducto.resx">
+      <DependentUpon>FrmProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProformaEvento.resx">
+      <DependentUpon>FrmProformaEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroEvento.resx">
+      <DependentUpon>FrmRegistroEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroTrabajador.resx">
+      <DependentUpon>FrmRegistroTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroUsuario.resx">
+      <DependentUpon>FrmRegistroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoTrabajador.resx">
+      <DependentUpon>FrmTipoTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUM.resx">
+      <DependentUpon>FrmUM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageBoxPersonalizado.resx">
+      <DependentUpon>MessageBoxPersonalizado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VillaSofia.resx">
+      <DependentUpon>VillaSofia.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{451ce08c-5587-4cfb-8d43-eb2cf63afe1f}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\masBlanco321.png" />
+    <None Include="Resources\masAzul2501.png" />
+    <None Include="Resources\mas94,148,255Azul321.png" />
+    <None Include="Resources\guardarBlanco321.png" />
+    <None Include="Resources\flechaIzquierdaBlanca3221.png" />
+    <None Include="Resources\flechaIzquierdaBlanca3211.png" />
+    <None Include="Resources\flechaIzquierdaBlanca323.png" />
+    <None Include="Resources\flechaIzquierda94,148,255Azul321.png" />
+    <None Include="Resources\equisNegra321.png" />
+    <None Include="Resources\equisBlanca321.png" />
+    <None Include="Resources\equis94,148,255Azul321.png" />
+    <None Include="Resources\equis11.png" />
+    <None Include="Resources\equis2.png" />
+    <None Include="Resources\editarBlanco321.png" />
+    <None Include="Resources\editarAzul321.png" />
+    <None Include="Resources\derechaBlanca321.png" />
+    <None Include="Resources\derechaAzul321.png" />
+    <None Include="Resources\arribaBlanco321.png" />
+    <None Include="Resources\arriba94,148,255Azul321.png" />
+    <None Include="Resources\abajoBlanco321.png" />
+    <None Include="Resources\abajo94,148,255Azul321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eventos256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recetas256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\caja256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eventoblanco256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoBarra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoBlancoPiedra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoBlancoLineas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recetasBlanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cajablanco256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventasblanco256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izquierdaBlanca32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardarAzul32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimirBlanco32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir2Blanco32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dineroBlanco32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imprimir2Azul32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dineroAzul32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anadir %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anadir %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receta %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\receta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siguiente-boton %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siguienteBtn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comidaAzul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atrasAzul32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trespuntos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trespuntosGris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abajoWhiteSmoke32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arribaWhiteSmoke32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comidaBlanco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cajaregistradora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondogris.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trespuntosNegro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izquierdaAzul32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\derecha2fnegra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drecha2fdelgadanegra.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
